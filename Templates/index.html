@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>
+    El mensaje se encuentra dentro de main.html
+  </p>
+  {% if is_premium %}
+    <p>
+      Este usuario es premium
+    </p>
+  {% endif %}
+  {% if courses %}
+    <ul>
+      {% for course in courses %}
+        <li>{{ course }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}
